@@ -1,6 +1,6 @@
 :root {
   /* General styles */
-  --background-color: #ffffff;
+  --background-color: #f8fbfd;
   --text-color: #1D232F;
   --font-family: "Inter", Arial, sans-serif;
 
@@ -8,15 +8,18 @@
   --nav-background: #163772;
   --nav-text-color: #FFFFFF;
 
+  /* Liveboard */
+  --liveboard-background: #FFFFFF;
+
   /* Cards and panels */
   --card-background: #FFFFFF;
   --card-border-radius: 10px;
   --card-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
   /* Inputs */
-  --input-background: #ffffff;
+  --input-background: #f1f5f9;
   --input-border-radius: 8px;
-  --input-border-color: #e1eaec;
+  --input-border-color: #d1d5db;
   --input-focus-border-color: #2770EF;
 
   /* Buttons */
@@ -42,6 +45,11 @@ body {
 .navbar {
   background-color: var(--nav-background);
   color: var(--nav-text-color);
+}
+
+.liveboard {
+  background-color: var(--liveboard-background);
+  padding: 16px;
 }
 
 .card {
@@ -85,4 +93,3 @@ button:hover {
 .chart .bar {
   background-color: var(--chart-secondary-color);
 }
-
