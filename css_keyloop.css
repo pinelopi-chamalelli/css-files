@@ -1,95 +1,111 @@
 :root {
-  /* General styles */
-  --background-color: #f8fbfd;
-  --text-color: #1D232F;
-  --font-family: "Inter", Arial, sans-serif;
-
-  /* Navigation bar */
-  --nav-background: #163772;
-  --nav-text-color: #FFFFFF;
-
-  /* Liveboard */
-  --liveboard-background: #FFFFFF;
-
-  /* Cards and panels */
-  --card-background: #FFFFFF;
-  --card-border-radius: 10px;
-  --card-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
-  /* Inputs */
-  --input-background: #f1f5f9;
-  --input-border-radius: 8px;
-  --input-border-color: #d1d5db;
-  --input-focus-border-color: #2770EF;
-
-  /* Buttons */
-  --button-primary-background: #2770EF;
-  --button-primary-color: #FFFFFF;
-  --button-primary-hover-background: #2359B6;
-  --button-border-radius: 8px;
-
-  /* Charts */
-  --chart-primary-color: #4682B4;
-  --chart-secondary-color: #6CA6CD;
-
-  /* Shadows */
-  --shadow-soft: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --background-color: #FFFFFF;
+  --card-border-color: #E5E7EB;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --primary-text-color: #1F2937;
+  --secondary-text-color: #6B7280;
+  --font-family: 'Inter', sans-serif;
+  --chart-primary-color: #4DB6AC;
+  --chart-secondary-color: #81C784;
+  --table-border-color: #E5E7EB;
+  --table-row-hover: #F9FAFB;
+  --table-header-background: #F3F4F6;
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
   font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  margin: 0;
+  padding: 0;
 }
 
-.navbar {
-  background-color: var(--nav-background);
-  color: var(--nav-text-color);
-}
-
-.liveboard {
-  background-color: var(--liveboard-background);
-  padding: 16px;
-}
-
+/* Card Styles */
 .card {
-  background-color: var(--card-background);
-  border-radius: var(--card-border-radius);
+  background-color: var(--background-color);
+  border: 1px solid var(--card-border-color);
   box-shadow: var(--card-shadow);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 16px;
+}
+
+/* Chart Styles */
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  border-radius: 8px;
   padding: 16px;
 }
 
-input {
-  background-color: var(--input-background);
-  border: 1px solid var(--input-border-color);
-  border-radius: var(--input-border-radius);
-  padding: 8px 12px;
-  transition: border-color 0.2s;
+.chart .chart-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  margin-bottom: 8px;
 }
 
-input:focus {
-  border-color: var(--input-focus-border-color);
-  outline: none;
+.chart .chart-color {
+  fill: var(--chart-primary-color);
 }
 
-button {
-  background-color: var(--button-primary-background);
-  color: var(--button-primary-color);
-  border: none;
-  border-radius: var(--button-border-radius);
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background-color: var(--background-color);
+  border: 1px solid var(--table-border-color);
+  border-radius: 8px;
 }
 
-button:hover {
-  background-color: var(--button-primary-hover-background);
+.table th {
+  background-color: var(--table-header-background);
+  color: var(--primary-text-color);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px;
 }
 
-.chart {
-  color: var(--chart-primary-color);
+.table td {
+  padding: 12px;
+  color: var(--secondary-text-color);
+  border-top: 1px solid var(--table-border-color);
 }
 
-.chart .bar {
-  background-color: var(--chart-secondary-color);
+.table tr:hover {
+  background-color: var(--table-row-hover);
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--table-row-hover);
+}
+
+/* Additional Styling */
+.header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 24px;
 }
