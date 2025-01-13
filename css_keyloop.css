@@ -1,5 +1,5 @@
 :root {
-  --background-color: #FFFFFF;
+  --background-color: #FFFFFF; /* App-wide background color */
   --card-border-color: #E5E7EB;
   --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   --primary-text-color: #1F2937;
@@ -14,7 +14,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--background-color);
+  background-color: var(--background-color); /* Set app background color to white */
   color: var(--primary-text-color);
   margin: 0;
   padding: 0;
