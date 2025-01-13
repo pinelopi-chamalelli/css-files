@@ -1,0 +1,88 @@
+:root {
+  /* General styles */
+  --background-color: #f8fbfd;
+  --text-color: #1D232F;
+  --font-family: "Inter", Arial, sans-serif;
+
+  /* Navigation bar */
+  --nav-background: #163772;
+  --nav-text-color: #FFFFFF;
+
+  /* Cards and panels */
+  --card-background: #FFFFFF;
+  --card-border-radius: 10px;
+  --card-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Inputs */
+  --input-background: #f1f5f9;
+  --input-border-radius: 8px;
+  --input-border-color: #d1d5db;
+  --input-focus-border-color: #2770EF;
+
+  /* Buttons */
+  --button-primary-background: #2770EF;
+  --button-primary-color: #FFFFFF;
+  --button-primary-hover-background: #2359B6;
+  --button-border-radius: 8px;
+
+  /* Charts */
+  --chart-primary-color: #4682B4;
+  --chart-secondary-color: #6CA6CD;
+
+  /* Shadows */
+  --shadow-soft: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.navbar {
+  background-color: var(--nav-background);
+  color: var(--nav-text-color);
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 16px;
+}
+
+input {
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  padding: 8px 12px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--button-primary-background);
+  color: var(--button-primary-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-primary-hover-background);
+}
+
+.chart {
+  color: var(--chart-primary-color);
+}
+
+.chart .bar {
+  background-color: var(--chart-secondary-color);
+}
+
