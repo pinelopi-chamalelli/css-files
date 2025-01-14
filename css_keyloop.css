@@ -1,15 +1,10 @@
 :root {
-  --background-color: #FFFFFF; /* App-wide background color */
-  --card-border-color: #E5E7EB;
-  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --primary-text-color: #1F2937;
-  --secondary-text-color: #6B7280;
-  --font-family: 'Inter', sans-serif;
-  --chart-primary-color: #4DB6AC;
-  --chart-secondary-color: #81C784;
-  --table-border-color: #E5E7EB;
-  --table-row-hover: #F9FAFB;
-  --table-header-background: #F3F4F6;
+  --ts-var-root-background: #FFFFFF; /* App-wide background color */
+  --ts-var-viz-border-radius: #E5E7EB;
+  --ts-var-viz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ts-var-root-color: #1F2937;
+  --ts-var-root-secondary-color: #6B7280;
+  --ts-var-root-font-family: 'Inter', sans-serif;
 }
 
 body {
