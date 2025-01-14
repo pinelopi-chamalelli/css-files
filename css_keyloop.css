@@ -1,106 +1,87 @@
 :root {
-  --ts-var-root-background: #FFFFFF; /* App-wide background color */
-  --ts-var-viz-border-radius: #E5E7EB;
-  --ts-var-viz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --ts-var-root-color: #1F2937;
-  --ts-var-root-secondary-color: #6B7280;
-  --ts-var-root-font-family: 'Inter', sans-serif;
+  /* ThoughtSpot SDK Variables */
+  --ts-font-family: "Roboto", sans-serif;
+  --ts-color-primary: #0d6efd; /* Example primary color */
+  --ts-color-background: #f8f9fa;
+  --ts-color-border: #e0e0e0;
+  --ts-color-text: #212529;
+  --ts-color-text-secondary: #6c757d;
+
+  --ts-font-size-small: 12px;
+  --ts-font-size-medium: 14px;
+  --ts-font-size-large: 16px;
+
+  --ts-border-radius: 8px;
+  --ts-spacing: 16px;
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--background-color); /* Set app background color to white */
-  color: var(--primary-text-color);
+  font-family: var(--ts-font-family);
+  background-color: var(--ts-color-background);
   margin: 0;
   padding: 0;
 }
 
-/* Card Styles */
-.card {
-  background-color: var(--background-color);
-  border: 1px solid var(--card-border-color);
-  box-shadow: var(--card-shadow);
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
+.liveboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ts-spacing);
+  padding: var(--ts-spacing);
 }
 
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--primary-text-color);
-  margin-bottom: 8px;
+.liveboard-card {
+  background: #ffffff;
+  border: 1px solid var(--ts-color-border);
+  border-radius: var(--ts-border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: var(--ts-spacing);
 }
 
-.card-subtitle {
-  font-size: 0.875rem;
-  color: var(--secondary-text-color);
-  margin-bottom: 16px;
+.liveboard-card h2 {
+  font-size: var(--ts-font-size-large);
+  color: var(--ts-color-text);
+  margin-bottom: var(--ts-spacing);
 }
 
-/* Chart Styles */
-.chart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background-color);
-  border-radius: 8px;
-  padding: 16px;
+.donut-chart-container,
+.bar-chart-container {
+  text-align: center;
 }
 
-.chart .chart-title {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--primary-text-color);
-  margin-bottom: 8px;
+.donut-chart {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
 }
 
-.chart .chart-color {
-  fill: var(--chart-primary-color);
+.bar-chart {
+  width: 100%;
+  height: 150px;
 }
 
-/* Table Styles */
-.table {
+.lost-sales-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 16px;
-  background-color: var(--background-color);
-  border: 1px solid var(--table-border-color);
-  border-radius: 8px;
+  margin-top: var(--ts-spacing);
 }
 
-.table th {
-  background-color: var(--table-header-background);
-  color: var(--primary-text-color);
-  font-weight: 600;
+.lost-sales-table th,
+.lost-sales-table td {
   text-align: left;
-  padding: 12px;
+  padding: var(--ts-spacing);
+  font-size: var(--ts-font-size-medium);
 }
 
-.table td {
-  padding: 12px;
-  color: var(--secondary-text-color);
-  border-top: 1px solid var(--table-border-color);
+.lost-sales-table th {
+  background-color: var(--ts-color-background);
+  color: var(--ts-color-text-secondary);
 }
 
-.table tr:hover {
-  background-color: var(--table-row-hover);
+.lost-sales-table td {
+  border-bottom: 1px solid var(--ts-color-border);
+  color: var(--ts-color-text);
 }
 
-.table tr:nth-child(even) {
-  background-color: var(--table-row-hover);
-}
-
-/* Additional Styling */
-.header {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-text-color);
-  margin-bottom: 16px;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: var(--secondary-text-color);
-  margin-bottom: 24px;
+.lost-sales-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
